@@ -108,7 +108,7 @@ $(document).ready(function () {
   function handleTaskDeleteRequest() {
     var parentEl = $(this).parents('[data-task-id]');
     var taskId = parentEl.attr('data-task-id');
-    var requestUrl = apiRoot + 'tasks' + taskId;
+    var requestUrl = apiRoot + 'tasks/' + taskId;
 
     $.ajax({
       url: requestUrl,
