@@ -73,7 +73,6 @@ $(document).ready(function () {
         tasks.forEach(task => {
           availableTasks[task.id] = task;
         });
-
         getAllAvailableBoards(handleDatatableRender, tasks);
       }
     });
@@ -138,8 +137,8 @@ $(document).ready(function () {
         content: taskContent
       }),
       success: function () {
-        getAllTasks()
-        // parentEl.slideUp(400, function () { parentEl.remove(); });
+        getAllTasks();
+        console.log('New task created');
       }
     });
   }
