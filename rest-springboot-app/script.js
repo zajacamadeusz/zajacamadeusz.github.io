@@ -137,7 +137,10 @@ $(document).ready(function () {
         title: taskTitle,
         content: taskContent
       }),
-      success: getAllTasks
+      success: function () {
+        getAllTasks()
+        // parentEl.slideUp(400, function () { parentEl.remove(); });
+      }
     });
   }
 
