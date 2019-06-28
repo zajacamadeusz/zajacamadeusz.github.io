@@ -136,9 +136,11 @@ $(document).ready(function () {
         title: taskTitle,
         content: taskContent
       }),
-      success: function () {
-        getAllTasks();
-        console.log('New task created');
+      complete: function (data) {
+        if (data.status === 200) {
+          console.log('Task created');
+          getAllTasks;
+        }
       }
     });
   }
