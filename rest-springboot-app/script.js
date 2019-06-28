@@ -138,8 +138,10 @@ $(document).ready(function () {
       }),
       complete: function (data) {
         if (data.status === 200) {
-          console.log('Task created');
-          getAllTasks;
+          getAllTasks();
+        }
+        else {
+          console.log(data.status);
         }
       }
     });
